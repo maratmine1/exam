@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каршеринг</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <h1>Каршеринг</h1>
+        <p>Билет №12</p>
+    </header>
+
+    <main class="content">
+        <section class="card">
+            <h2>Свободные машины</h2>
+            <button id="loadCarsBtn">Загрузить свободные авто</button>
+            <table id="carsTable">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Модель</th>
+                    <th>Номер</th>
+                    <th>Резерв</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div id="carsError" class="error"></div>
+        </section>
+
+        <section class="card">
+            <h2>Информация о выбранном автомобиле</h2>
+            <form id="carInfoForm">
+                <div class="form-row">
+                    <label for="phone">Телефон</label>
+                    <input type="text" id="phone" name="phone" required placeholder="+7XXXXXXXXXX">
+                </div>
+                <div class="form-row">
+                    <label for="smsCode">СМС код</label>
+                    <input type="text" id="smsCode" name="smsCode" required placeholder="Например: 1420">
+                </div>
+                <button type="submit">Показать автомобиль</button>
+            </form>
+            <div id="carInfoResult" class="result"></div>
+            <div id="carInfoError" class="error"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    </footer>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
+
